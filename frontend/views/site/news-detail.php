@@ -1,84 +1,38 @@
 <?php
-use yii\widgets\LinkPager;
-use frontend\models\Product;
-
 /**
  * @var $categories
  * @var $pages
  * @var $bread
+ * @var $dataRL
  */
-
-//echo $this->render("//element/page-title",['name' => $data->name, 'bread' => $bread]);
 ?>
-<div class="w1000">
-    <div class="content content-page page-home w100">
-        <div class="page-left">
-            <div class="title-detail w100">
-                <?php echo $data->name ?>
-            </div>
-            <div class="breadcrumb w100">
-                <ul>
-                    <li>
-                        <?php echo date('d-m-Y H:i') ?>
-                    </li>
-                    <li class="arrow">|</li>
-                    <li>
-                        <?php echo $data->category->name ?>
-                    </li>
-                </ul>
-                <ul class="breadcrumb-social">
-                    <li>
-                        <div class="fb-like" data-href="http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="text-description">
-                <?php echo $data->desc ?>
-            </div>
-            <div class="w100 text-content">
-                <?php echo $data->content ?>
-            </div>
+<div class="page-content w100">
+    <div class="w1000">
 
-            <div class="w100 wrapper-social-bottom">
-                <div class="fb-like" data-href="http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-            </div>
-            <div class="wrapper-tags w100">
-                <div class="tags-left">
-                    <i class="fas fa-tags"></i> Tags
-                </div>
-                <div class="tags-right">
-                    <ul>
-                        <?php echo $data->tags ?>
-                    </ul>
-                </div>
-            </div>
-            <?php  echo $this->render("//element/comment"); ?>
-            <div class="w100 border_bottom">
-            </div>
-            <div class="wrapper-news-relates w100">
-                <div class="block-title w100">
-                    <i class="gachccm"></i>
-                    <?php echo Yii::$app->view->params['lang']->same_category ?>
-                </div>
-                <div class="block-content w100">
-                    <?php
-                    foreach ($dataRL as $item) {
-                    ?>
-                    <div class="item">
-                        <a href="<?php echo $item->getUrl() ?>">
-                            <div class="w100 wrapper-image">
-                                <img src="<?php echo $item->image ?>" class="w100">
-                            </div>
-                            <div class="tittle w100">
-                                <?php echo $item->name ?>
-                            </div>
-                        </a>
-                    </div>
-                    <?php } ?>
-                </div>
-            </div>
+        <?php echo $this->render("//element/breadcrumb", ['name' => $data->name, 'data' => $bread]); ?>
+        <div class="title-page">
+            <?php echo $data->name ?>
         </div>
-        <?php  echo $this->render("//element/sidebar"); ?>
+
+        <p class="post-meta">
+            <span class="post-meta-author">
+                <i class="fa fa-user"></i>
+                <a href="javascript:;" title="">Admin </a>
+            </span>
+            <span class="tie-date"><i class="fa fa-clock-o"></i>19/09/2019</span>
+            <span class="post-cats">
+                <i class="fa fa-folder"></i>
+                <a href="https://3gviettel.vn/mobile-internet" rel="category tag">Mobile Internet</a>
+            </span>
+        </p>
+
+        <div class="wrapper-content-post entry w100">
+            <?= $data->content ?>
+        </div>
+
+        <div class="w100 block-package-sale">
+            <?php echo $this->render("//element/package/sale"); ?>
+        </div>
     </div>
 </div>

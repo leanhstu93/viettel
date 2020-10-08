@@ -47,6 +47,7 @@ class ProductController extends BaseController
         $model = new Product();
         $formData = Yii::$app->request->post();
         # language
+        $dataLang = [];
         $listLanguage = Yii::$app->params['listLanguage'];
         foreach ($listLanguage as $key => $value) {
             if ($value['default']) continue;
@@ -103,6 +104,7 @@ class ProductController extends BaseController
     public function actionUpdate($id)
     {
         # language
+        $dataLang = [];
         $listLanguage = Yii::$app->params['listLanguage'];
         foreach ($listLanguage as $key => $value) {
             if ($value['default']) continue;

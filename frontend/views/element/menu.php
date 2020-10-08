@@ -1,45 +1,40 @@
 <div class="wrapper-menu">
-    <div class="w1000">
-        <div id='cssmenu' class="w100">
-            <ul>
-                <li><a class="class="acvmenu bt_home active"" href='/'>
-                    <img src="images/homepage.png">
-                    </a>
-                </li>
-                <?php
-                foreach ($this->params['menu'] as $item) {
-                    $class_sub = !empty($item['sub_menu']) ? 'dropdown' : '';
-                    ?>
-                        <?php
-                        if (!empty($item['sub_menu'])) { ?>
+    <div id="cssmenu">
+        <ul>
+            <li>
+                <a data-link="home" href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="service">Dịch vụ</a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="package-month">Gói tháng </a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="package-dcom">Gói Dcom</a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="package-sale">Gói sale</a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="news-home">Tin tức</a>
+            </li>
+            <li>
+                <a href="javascript:;" data-link="footer">Liên hệ</a>
+            </li>
 
-                                <?php foreach ($item['sub_menu'] as $item1) {
-                                    $class_sub = !empty($item1['sub_menu']) ? 'dropdown' : '';
-                                    ?>
-                                    <li class="current <?= $class_sub ?>">
-                                        <a href="<?= $item1['link'] ?>"><?= $item1['name'] ?>
-                                            <?php if (!empty($item1['sub_menu'])) { ?>
-                                                <i class="fas fa-angle-right"></i>
-                                            <?php } ?>
-                                        </a>
-                                        <?php
-                                        if (!empty($item1['sub_menu'])) {
-                                            ?>
-                                            <ul>
-                                                <?php foreach ($item1['sub_menu'] as $item2) {
-                                                    $class_sub = !empty($item2['sub_menu']) ? 'dropdown' : '';
-                                                    ?>
-                                                    <li  class="current <?= $class_sub ?>">
-                                                        <a href="<?= $item2['link'] ?>"><?= $item2['name'] ?></a>
-                                                    </li>
-                                                <?php } ?>
-                                            </ul>
-                                        <?php } ?>
-                                    </li>
-                                <?php } ?>
-                        <?php } ?>
-                <?php } ?>
-            </ul>
-        </div>
+        </ul>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $(window).scroll(function(){
+            if($(this).scrollTop()>250){
+                $(".header_logo").addClass("fix-scroll");
+            }
+            else{
+                $(".header_logo").removeClass("fix-scroll");
+            }
+        });
+    });
+</script>

@@ -3,11 +3,11 @@
     <?php
     $dataLast = array_pop($data);
 
-    foreach ($data as $value) {
+    foreach ($data as $key => $value) {
     ?>
         <li>
-            <a href="<?= $value['link'] ?>"><?= $value['name'] ?></a>
+            <?= $key > 0 ? '/' : '' ?><a href="<?= $value['link'] ?>"><?= $value['name'] ?></a>
         </li>
     <?php } ?>
-    <li><?= $dataLast['name'] ?></li>
+    <li>/ <?= $dataLast['name'] ?></li>
 </ul>

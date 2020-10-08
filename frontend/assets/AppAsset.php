@@ -16,13 +16,17 @@ class AppAsset extends AssetBundle
         'css/menu/styles.css',
         'libs/slick/slick.css',
         'libs/fontawesome/css/all.css',
-        'libs/fontawesome/css/fontawesome.css'
+        'libs/fontawesome/css/fontawesome.css',
+        'libs/menumobile/jquery.mmenu.all.css',
+        'libs/menumobile/demo.css',
     ];
     public $js = [
 //        'js/jquery.js',
-        'js/slimScroll/jquery.slimscroll.min.js',
-        'libs/slick/slick.js',
+//        'js/slimScroll/jquery.slimscroll.min.js',
+//        'libs/slick/slick.js',
+        'libs/menumobile/jquery.mmenu.min.all.js',
         'js/menu/script.js',
+        'js/jqueryviettel.js',
         'js/main.js',
     ];
     public $depends = [

@@ -10,7 +10,36 @@ return [
             'link' => 'index/index',
             'icon' => '<i class="site-menu-icon wb-layout" aria-hidden="true"></i>',
         ],
-
+        'mn_manager_product' => [
+            'name' => 'Quản lý sản phẩm',
+            'link' => '',
+            'icon' => '<i class="site-menu-icon wb-layout" aria-hidden="true"></i>',
+            'submenu' => [
+                'submenu_1' => [
+                    'name' => 'Thiết lập sản phẩm',
+                    'link' => 'product/config'
+                ],
+                'submenu_2' => [
+                    'name' => 'Danh sách sản phẩm',
+                    'link' => 'product/index'
+                ],
+                'submenu_3' => [
+                    'name' => 'Danh sách danh mục',
+                    'link' => 'product-category/index'
+                ],
+            ]
+        ],
+        'mn_manager_single-page' => [
+            'name' => 'Quản lý trang đơn',
+            'link' => '',
+            'icon' => '<i class="site-menu-icon wb-layout" aria-hidden="true"></i>',
+            'submenu' => [
+                'submenu_1' => [
+                    'name' => 'Danh sách trang đơn',
+                    'link' => 'single-page/index'
+                ],
+            ]
+        ],
         'mn_manager_news' => [
             'name' => 'Quản lý tin tức',
             'link' => '',
@@ -162,60 +191,48 @@ return [
             ]
 
         ],
-        'CUSTOM_SINGLE_PAGE' => [
-            'one_footer' =>[
-                'name' => 'Trang đơn footer',
-                'data' => 1,
-                'note' => '',
-                'limit' => 1
-            ],
-            'tree_middle_home' =>[
-                'name' => '3 trang đơn giữa trang chủ',
-                'data' => 2,
-                'note' => '',
-                'limit' => 3
-            ],
-            'footer_list_col_link_1' =>[
-                'name' => 'Danh sách trang đơn footer cột liên kết 1',
-                'data' => 3,
-                'note' => '',
-                'limit' => 5
-            ],
-            'footer_list_col_link_2' =>[
-                'name' => 'Danh sách trang đơn footer cột liên kết 2',
-                'data' => 4,
-                'note' => '',
-                'limit' => 5
-            ],
-            'one_page_about' =>[
-                'name' => 'Trang giới thiệu',
-                'data' => 1,
-                'note' => '',
-                'limit' => 1
-            ],
-        ],
+//        'CUSTOM_SINGLE_PAGE' => [
+//            'one_footer' =>[
+//                'name' => 'Trang đơn footer',
+//                'data' => 1,
+//                'note' => '',
+//                'limit' => 1
+//            ],
+//            'tree_middle_home' =>[
+//                'name' => '3 trang đơn giữa trang chủ',
+//                'data' => 2,
+//                'note' => '',
+//                'limit' => 3
+//            ],
+//            'footer_list_col_link_1' =>[
+//                'name' => 'Danh sách trang đơn footer cột liên kết 1',
+//                'data' => 3,
+//                'note' => '',
+//                'limit' => 5
+//            ],
+//            'footer_list_col_link_2' =>[
+//                'name' => 'Danh sách trang đơn footer cột liên kết 2',
+//                'data' => 4,
+//                'note' => '',
+//                'limit' => 5
+//            ],
+//            'one_page_about' =>[
+//                'name' => 'Trang giới thiệu',
+//                'data' => 1,
+//                'note' => '',
+//                'limit' => 1
+//            ],
+//        ],
         'CUSTOM_NEWS_CATEGORY' => [
-            'home_news_middle' =>[
+            'home_news_middle1' =>[
                 'name' => 'Danh sách tin tức nằm giữa trang chủ 1',
                 'data' => 1,
                 'note' => '',
-                'limit' => 10
-            ],
-            'home_news_product_highlight' =>[
-                'name' => 'Danh sách tin tức nằm giữa trang chủ 2',
-                'data' => 2,
-                'note' => '',
-                'limit' => 15
-            ],
-            'home_news_slide_1' =>[
-                'name' => 'Danh sách tin tức trang chủ slide 1',
-                'data' => 3,
-                'note' => '',
                 'limit' => 6
             ],
-            'home_news_slide_2' =>[
-                'name' => 'Danh sách tin tức trang chủ slide 2',
-                'data' => 4,
+            'home_news_middle2' =>[
+                'name' => 'Danh sách tin tức nằm giữa trang chủ 2',
+                'data' => 2,
                 'note' => '',
                 'limit' => 6
             ],
